@@ -11,12 +11,12 @@ st.write("Ask me questions about my projects, certifications, or academic backgr
 # 1. Fetch configurations from Environment Variables
 FOUNDRY_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT") # e.g., https://<your-resource>.services.ai.azure.com
 AGENT_ID = os.getenv("AZURE_AGENT_ID")                 # e.g., AI-Career-Agent:5
+
 if not FOUNDRY_ENDPOINT or not AGENT_ID:
     st.error("Configuration variables missing. Please check your environment variables settings.")
     st.stop()
 
 # 2. Initialize the Native Project Client using Entra ID 
-# Local development uses your 'az login' credentials automatically.
 @st.cache_resource
 def get_project_client():
     credential = DefaultAzureCredential()
@@ -24,12 +24,10 @@ def get_project_client():
 
 project_client = get_project_client()
 
-# 3. Maintain session state thread ID natively via Foundry
+# 3. Maintain session state thread ID natively via nested Foundry namespace
 if "thread_id" not in st.session_state:
-    with AIProjectClient.from_connection_string(...) as project_client:
-    # Ensure this runs BEFORE the with-block ends
-        thread = project_client.agents.create_thread()
-
+    thread = project_client.agents.threads.create()
+    st.session_state.thread_id = thread.id
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -46,24 +44,24 @@ if user_query := st.chat_input("Ask something about my machine learning backgrou
     st.session_state.messages.append({"role": "user", "content": user_query})
 
     # Append user input message into the live thread context
-    project_client.agents.create_message(
+    project_client.agents.messages.create(
         thread_id=st.session_state.thread_id,
         role="user",
         content=user_query
     )
 
-    # Execute backend agent inference processing
+    # Execute backend agent inference processing using the nested runs namespace
     with st.spinner("Agent is analyzing your request..."):
-        run = project_client.agents.create_and_process(
+        run = project_client.agents.runs.create_and_process(
             thread_id=st.session_state.thread_id,
             agent_id=AGENT_ID
         )
 
-    # Retrieve answer token payloads once execution successfully completes
+    # Retrieve answer payloads once execution successfully completes
     if run.status == "completed":
-        messages = project_client.agents.list_messages(thread_id=st.session_state.thread_id)
+        messages = project_client.agents.messages.list(thread_id=st.session_state.thread_id)
         
-        # The latest response from the agent is always delivered as the first item in the list data
+        # Pull the latest text block value safely from the message payload data array
         ai_response = messages.data[0].content[0].text.value
         
         with st.chat_message("assistant"):
