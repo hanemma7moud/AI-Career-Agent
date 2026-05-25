@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from openai import AzureOpenAI
+from openai import OpenAI
 
 st.set_page_config(page_title="AI Career Agent", page_icon="🤖", layout="centered")
 
@@ -17,11 +17,11 @@ if not AZURE_ENDPOINT or not AZURE_KEY or not AGENT_ID:
     st.error("Deployment configuration missing. Please verify API keys.")
     st.stop()
 
-# 2. Initialize the standard Azure OpenAI client
-client = AzureOpenAI(
-    azure_endpoint=AZURE_ENDPOINT,
-    api_key=AZURE_KEY,
-    api_version="2024-10-21-preview" # Framework-compatible version for Agents
+# 2. Initialize the standard  OpenAI client
+# Append '/openai/v1' to point directly to the Foundry-compatible router
+client = OpenAI(
+    base_url=f"{AZURE_ENDPOINT.rstrip('/')}/openai/v1",
+    api_key=AZURE_KEY
 )
 
 # 3. Maintain session state for the chat thread
