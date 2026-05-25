@@ -10,7 +10,6 @@ st.title("💼 Chat with my AI Career Agent")
 st.write("Ask me questions about my projects, certifications, or academic background.")
 
 # 1. Fetch configurations from Environment Variables
-FOUNDRY_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT") # e.g., https://<your-resource>.services.ai.azure.com
 AGENT_ID = os.getenv("AZURE_AGENT_ID")                 # e.g., AI-Career-Agent:5
 
 if not FOUNDRY_ENDPOINT or not AGENT_ID:
@@ -18,7 +17,7 @@ if not FOUNDRY_ENDPOINT or not AGENT_ID:
     st.stop()
 
 # 2. Initialize the Native Project Client using Entra ID 
-@st.cache_resource
+
 @st.cache_resource
 def get_project_client():
     credential = DefaultAzureCredential()
@@ -29,6 +28,7 @@ def get_project_client():
         project_name=os.getenv("AZURE_PROJECT_NAME"),
         credential=credential
     )
+
 
 project_client = get_project_client()
 
