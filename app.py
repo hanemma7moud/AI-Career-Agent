@@ -1,8 +1,6 @@
-
 import streamlit as st
 import os
 from openai import AzureOpenAI
-
 
 client = AzureOpenAI(
     api_key=os.getenv("AZURE_OPENAI_API_KEY"),
@@ -16,13 +14,11 @@ user_input = st.text_input("Ask me something:")
 
 if user_input:
     response = client.chat.completions.create(
-        model="career-model",
+        model="gpt-4.1",   # 👈 IMPORTANT
         messages=[
             {"role": "system", "content": "You are a helpful AI career assistant."},
             {"role": "user", "content": user_input}
         ]
     )
-
+    
     st.write(response.choices[0].message.content)
-
-
