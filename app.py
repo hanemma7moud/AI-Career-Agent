@@ -10,11 +10,16 @@ st.title("💼 Chat with my AI Career Agent")
 st.write("Ask me questions about my projects, certifications, or academic background.")
 
 # 1. Fetch configurations from Environment Variables
-AGENT_ID = os.getenv("AZURE_AGENT_ID")                 # e.g., AI-Career-Agent:5
 
-if not FOUNDRY_ENDPOINT or not AGENT_ID:
-    st.error("Configuration variables missing. Please check your environment variables settings.")
+SUBSCRIPTION_ID = os.getenv("AZURE_SUBSCRIPTION_ID")
+RESOURCE_GROUP = os.getenv("AZURE_RESOURCE_GROUP")
+PROJECT_NAME = os.getenv("AZURE_PROJECT_NAME")
+AGENT_ID = os.getenv("AZURE_AGENT_ID")
+
+if not SUBSCRIPTION_ID or not RESOURCE_GROUP or not PROJECT_NAME or not AGENT_ID:
+    st.error("Configuration variables missing. Please check your environment variables.")
     st.stop()
+
 
 # 2. Initialize the Native Project Client using Entra ID 
 
