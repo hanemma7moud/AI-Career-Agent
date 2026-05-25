@@ -2,23 +2,25 @@ import streamlit as st
 import os
 from openai import AzureOpenAI
 
-client = AzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    api_version="2024-02-15-preview",
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+
+endpoint = "https://csc300-cv.services.ai.azure.com/api/projects/CVAssistant"
+
+project_client = AIProjectClient(
+    endpoint=endpoint,
+    credential=DefaultAzureCredential(),
 )
 
-st.title("💼 AI Career Agent")
+my_agent = "AI-Career-Agent"
+my_version = "5"
 
-user_input = st.text_input("Ask me something:")
+openai_client = project_client.get_openai_client()
 
-if user_input:
-    response = client.chat.completions.create(
-        model="gpt-4.1",   # 👈 IMPORTANT
-        messages=[
-            {"role": "system", "content": "You are a helpful AI career assistant."},
-            {"role": "user", "content": user_input}
-        ]
-    )
-    
-    st.write(response.choices[0].message.content)
+# Reference the agent to get a response
+response = openai_client.responses.create(
+    input=[{"role": "user", "content": "Tell me what you can help with."}],
+    extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
+)
+
+print(f"Response output: {response.output_text}")
