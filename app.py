@@ -1,24 +1,31 @@
-import streamlit as st
 import os
-from openai import AzureOpenAI
-
 from azure.ai.projects import AIProjectClient
+from azure.identity import DefaultAzureCredential
 
 endpoint = "https://csc300-cv.services.ai.azure.com/api/projects/CVAssistant"
 
 project_client = AIProjectClient(
-    endpoint=endpoint
+    endpoint=endpoint,
+    subscription_id=os.getenv("AZURE_SUBSCRIPTION_ID"),
+    resource_group_name=os.getenv("AZURE_RESOURCE_GROUP"),
+    project_name=os.getenv("AZURE_PROJECT_NAME"),
+    credential=DefaultAzureCredential()
 )
-
-my_agent = "AI-Career-Agent"
-my_version = "5"
 
 openai_client = project_client.get_openai_client()
 
-# Reference the agent to get a response
 response = openai_client.responses.create(
-    input=[{"role": "user", "content": "Tell me what you can help with."}],
-    extra_body={"agent_reference": {"name": my_agent, "version": my_version, "type": "agent_reference"}},
+    input=[{
+        "role": "user",
+        "content": "Tell me what you can help with."
+    }],
+    extra_body={
+        "agent_reference": {
+            "name": "AI-Career-Agent",
+            "version": "5",
+            "type": "agent_reference"
+        }
+    }
 )
 
-print(f"Response output: {response.output_text}")
+print(response.output_text)
