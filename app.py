@@ -11,7 +11,7 @@ st.write("Ask me questions about my projects, certifications, or academic backgr
 # 1. Fetch configurations from Environment Variables
 FOUNDRY_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT") # e.g., https://<your-resource>.services.ai.azure.com
 AGENT_ID = os.getenv("AZURE_AGENT_ID")                 # e.g., AI-Career-Agent:5
-
+thread = await project_client.agents.create_thread()
 if not FOUNDRY_ENDPOINT or not AGENT_ID:
     st.error("Configuration variables missing. Please check your environment variables settings.")
     st.stop()
@@ -27,8 +27,10 @@ project_client = get_project_client()
 
 # 3. Maintain session state thread ID natively via Foundry
 if "thread_id" not in st.session_state:
-    thread = project_client.agents.create_thread()
-    st.session_state.thread_id = thread.id
+    with AIProjectClient.from_connection_string(...) as project_client:
+    # Ensure this runs BEFORE the with-block ends
+        thread = project_client.agents.create_thread()
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
