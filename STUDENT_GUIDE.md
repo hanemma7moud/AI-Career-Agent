@@ -1,17 +1,16 @@
-import os
 
-# Define the markdown content exactly as requested
-markdown_content = """# 🚀 AI Career Agent — Student Guide
+# 🚀 AI Career Agent — Student Guide
 
-Welcome! In this lab, you will build and customize your own AI Career Agent using **Azure OpenAI (Microsoft Foundry Engine)** and **Streamlit**.
+Welcome! In this lab, you will build and customize your own **AI Career Agent** using **Azure OpenAI + Streamlit**.
 
 By the end of this guide, you will:
-- [x] Run the AI agent locally
-- [x] Connect it to your own Azure for Students subscription
-- [x] Customize it for your specific career interests and CV data
-- [x] Publish and deploy your own version online for recruiters
+✅ Run the AI agent locally  
+✅ Connect it to your own Azure account  
+✅ Customize it for your career interests  
+✅ Publish your own version  
 
 ---
+
 
 ## 📌 Overview
 This project is a customizable AI assistant that helps with:
