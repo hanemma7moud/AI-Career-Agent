@@ -33,10 +33,12 @@ You will fork this template project and turn it into your own personalized portf
 git clone [https://github.com/YOUR-USERNAME/ai-career-agent.git](https://github.com/YOUR-USERNAME/ai-career-agent.git)
 cd ai-career-agent
 
+---
 
 🟢 Step 2: Create Your Azure Resources
 You will need an Azure Student Subscription.
 ✅ Create Azure OpenAI Resource
+
 
 
 Go to 👉 https://portal.azure.com
