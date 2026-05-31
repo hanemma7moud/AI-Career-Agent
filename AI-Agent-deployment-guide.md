@@ -1,8 +1,7 @@
 
 This comprehensive, step-by-step guide walks you through verifying your Azure subscription regional constraints, creating a resource group, deploying a **Microsoft Foundry** resource, and building/testing a custom autonomous AI Agent.
 
-🎬  **Quick Start**: For a complete visual walkthrough of the entire end-to-end setup process, please refer to the video 
-https://github.com/user-attachments/assets/e25d0e2a-09f6-434b-8a4d-41bf751e925e
+🎬  **Quick Start**: For a complete visual walkthrough of the entire end-to-end setup process, please refer to the video https://youtu.be/P9oPRnGcWGc
 
 ## 
 ## 
