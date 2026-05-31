@@ -1,4 +1,3 @@
-<img width="1911" height="909" alt="Screenshot 2026-05-31 154109" src="https://github.com/user-attachments/assets/90d01da0-a6bc-4bf6-a828-b837d3afe4e3" /># Microsoft Foundry AI Agent Deployment Guide
 
 This comprehensive, step-by-step guide walks you through verifying your Azure subscription regional constraints, creating a resource group, deploying a **Microsoft Foundry** resource, and building/testing a custom autonomous AI Agent.
 
