@@ -53,29 +53,13 @@ Now, configure your cloud brain. You will build the agent inside your portal and
    AZURE_AGENT_VERSION="your agent version numbe, e.g 5"
    '''
 5. Click Deploy! Your application will be live globally in under two minutes.
-## Congratulations your agent is life now and you can use it in your github profile like mine :)
-<img width="700" height="271" alt="image" src="https://github.com/user-attachments/assets/ff810774-832d-4672-8ac0-297ad33186a4" />
 
    
-## How to Customize Your AI Agent
-### 🎯 1. Modify the AI Behavior (Prompt)
-Find where the system prompt is defined (e.g., in app.py or agent.py).
+## Congratulations your agent is life now and you can use it in your github profile like mine :)
 
-'''Python
-SYSTEM_PROMPT = "You are a helpful AI career advisor."
-''' 
+<img width="700" height="271" alt="image" src="https://github.com/user-attachments/assets/ff810774-832d-4672-8ac0-297ad33186a4" />
 
-✨ Try changing it to match your target path, such as:
-
-- Cybersecurity mentor
-
-- Data science coach
-
-- Software engineering career guide
-
-### 🎯 2. Personalize for Your Career
-Update the agent to focus on your specific degree path, target career goals, and technology stack interests.
 
 
 ## 📄 License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/hanemma7moud/AI-Career-Agent/blob/main/LICENSE) for more information.
