@@ -58,7 +58,7 @@ Now, configure your cloud brain. You will build the agent inside your portal and
    AZURE_ENDPOINT = "[https://your-resource-name.azure.com/](https://your-resource-name.azure.com/)"
    AZURE_API_KEY = "your 40 character secret key"
    AZURE_AGENT_NAME = "your agent deployment name"
-   AZURE_AGENT_VERSION="your agent version numbe, e.g 5"
+   AZURE_AGENT_VERSION="your agent version numbe, e.g. 5"
    
    
 6. Click Deploy! Your application will be live globally in under two minutes.
