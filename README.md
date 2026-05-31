@@ -1,11 +1,13 @@
 
-# 🤖 AI Career Agent (AI-900 Project Showcase)
+# 🤖 My AI Career Agent — Live Portfolio Engine
 
-Welcome to the **AI Career Agent** template repository! This project is a hands-on implementation designed for students and developers to move beyond theory and build a live, industry-grade portfolio piece. 
+Welcome to your **AI Career Agent** deployment repository! This project is a special bonus asset designed to bridge classroom cloud theories with a production-ready, industry-grade portfolio piece you can use to show off your skills to recruiters.
 
-This framework leverages **Microsoft Foundry (2026 Standards)**, **Retrieval-Augmented Generation (RAG)**, and **Streamlit** to create an interactive, autonomous chat assistant grounded entirely in your professional CV.
+This framework leverages **Microsoft Foundry (2026 Standards)**, **Retrieval-Augmented Generation (RAG)**, and **Streamlit** to create an interactive, autonomous chat assistant grounded entirely in your personal professional CV. 
 
-🚀 **Live Demo Reference:** [Check out my live profile agent here!](https://hanem-ai-agent.streamlit.app/))
+Fork this repo, drop in your unique keys, hook up your credentials, and display a live AI on your GitHub profile that talks directly to employers!
+
+🚀 **Live Prototype Reference:** [Interact with my live profile agent here!](https://hanem-ai-agent.streamlit.app/)
 
 ---
 
