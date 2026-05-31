@@ -21,29 +21,38 @@ Because allowed deployment regions are not globally uniform and depend heavily o
 1. **Access Subscriptions Portal**:
    * Navigate to the **Azure Portal Home**.
    * Under the *Azure services* grid or the *Navigate* section, click on **Subscriptions**.
+     
   ![Uploading Screenshot 2026-05-31 152122.png…]()
 <img width="1410" height="873" alt="Screenshot 2026-05-31 152110" src="https://github.com/user-attachments/assets/1c69922d-7c9b-4568-97c5-14c6ef1a1c27" />
+
 
 
 2. **Select Target Subscription**:
    * Review your active subscriptions table.
    * Click directly on your active management subscription link  `Azure for Students`).
+     
 <img width="1894" height="982" alt="Screenshot 2026-05-31 153924" src="https://github.com/user-attachments/assets/854e0034-a433-4401-8df9-527907103f70" />
+
 
   
 3. **Navigate to Compliance Policies**:
    * In the subscription's left-hand sidebar navigation menu, scroll down to the **Settings** sub-section.
    * Click on **Policies** to open the policy monitoring dashboard.
+     
   <img width="1901" height="888" alt="Screenshot 2026-05-31 154023" src="https://github.com/user-attachments/assets/e4a7a484-156c-4c64-817c-6f9f1bf702fb" />
+
 
      
 4. **Locate Regional Restrictions**:
    * Under the *Policy | Compliance* view, review the list of assigned compliance rules at the bottom.
    * Click on the assignment link titled **Allowed resource deployment regions**.
+     
 <img width="1901" height="933" alt="Screenshot 2026-05-31 154053" src="https://github.com/user-attachments/assets/14b4429c-5315-4b05-9515-423719d193c6" />
 
 
+
 <img width="1911" height="909" alt="Screenshot 2026-05-31 154109" src="https://github.com/user-attachments/assets/ca6c89f7-f16e-4ff1-a2d2-827c7342bded" />
+
 
 
     
@@ -53,7 +62,9 @@ Because allowed deployment regions are not globally uniform and depend heavily o
    * Locate the **Parameter ID**: `listOfAllowedLocations` and look across to its **Parameter value** array.
    * *Example verified regions include:* `["southeastasia", "newzealandnorth", "indonesiacentral", "japaneast", "eastasia"]`.
    * **Crucial Rule:** Record these values. Any resource group or Foundry asset created in subsequent steps *must* be anchored inside one of these specific regional boundaries.
+     
 <img width="1906" height="824" alt="Screenshot 2026-05-31 154127" src="https://github.com/user-attachments/assets/f36f0ce6-79fd-439b-984d-c07ddc03e424" />
+
 
 
 ---
