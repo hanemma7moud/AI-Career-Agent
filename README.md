@@ -32,10 +32,14 @@ Follow these exact steps to launch your own personalized Career Agent for free u
 
 Now, configure your cloud brain. You will build the agent inside your portal and collect the keys needed to power your frontend app.
 
+> 📖 **Detailed Walkthrough Available:** For an exact, step-by-step breakdown of this entire phase—including policy checks, resource provisioning, and file indexing—please refer to our dedicated [AI-Agent-deployment-guide.md](./AI-Agent-deployment-guide.md) reference file.
+
 1. Log into **Microsoft Foundry** ([ai.azure.com](https://ai.azure.com)) using your university credentials.
-2. **Create your AI-Career-Agent:** Use the skills you mastered during our CSC300 learning journey to configure your assistant workspace. *(🎥 [Click here to watch my Step-by-Step Video Guide](LINK_TO_YOUR_CANVAS_VIDEO) if you need a quick portal walkthrough!)*
-3. **Upload Your Knowledge Base:** Inside the Agent Builder pane, toggle the **File Search / Knowledge** utility and upload your personal CV file so the engine can ground its responses.
-4. Navigate to your deployed project hub and securely copy these four specific connection keys:
+2. **Create your AI-Career-Agent:** Use the skills you mastered during our CSC300 learning journey to configure your assistant workspace.
+*(🎥 Click here to watch my [Step-by-Step Video Guide](https://youtu.be/P9oPRnGcWGc) if you need a quick portal walkthrough!)*
+3. **Upload Your Knowledge Base**: Inside the Agent Builder pane, toggle the **File Search / Knowledge** utility and upload your personal resume file so the engine can ground its responses. 
+   *(💡 **Pro-Tip**: For the absolute best grounding and retrieval results, adapt your details using our structured [cv.md](./CV.md) template!)*. 
+4. **Harvest Connection Keys**: Navigate to your deployed project hub and securely copy these four specific connection keys into your environment setup:
    - 'AZURE_ENDPOINT'
    - 'AZURE_API_KEY'
    - 'AZURE_AGENT_NAME'
