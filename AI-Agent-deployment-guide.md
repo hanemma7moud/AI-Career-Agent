@@ -102,7 +102,7 @@ A Resource Group acts as a logical container hosting your cloud infrastructure d
    * From the welcoming canvas, locate the main control path and click **Create agents** or select **New Foundry**.
 3. **Assign Identification**:
    * A configuration window titled **Create an agent** will appear on your screen.
-   * **Agent name**: Input your specific naming convention (e.g., `HE-AI-Career-Agent`).
+   * **Agent name**: Input your specific naming convention (e.g., `AI-Career-Agent`).
    * Click **Create** to launch the low-code development studio environment.
 4. **Assign the Underlying LLM**:
    * Locate the **Model** option field block inside the playground setup menu.
@@ -110,10 +110,36 @@ A Resource Group acts as a logical container hosting your cloud infrastructure d
 5. **Define System Prompting & Behavioral Framework**:
    * Go to the **Instructions** workspace box.
    * Input your definitive system prompts, behavioral boundaries, response logic constraints, and domain orientation directives.
+  
+### 🤖 Reference System Prompt Template
+
+Copy the template block below, replace the bracketed placeholders (`[...]`) with your personal details, and paste it into the **Instructions** workspace text area in the Microsoft Foundry Agent Builder pane.
+
+```text
+You are an advanced, articulate AI Career Agent representing [Your Full Name], an aspiring [Your Target Role, e.g., AI Engineer / Data Scientist / Software Developer] who holds a degree in [Your Degree, e.g., Information and Communications Technology / Computer Science] from [Your University Name, e.g., University of the Sunshine Coast]. Your primary goal is to answer questions from recruiters, industry collaborators, and academic peers professionally and intelligently.
+
+Rules of Engagement:
+
+1. Base your answers strictly on the verified data provided via your Uploaded Files tool. Do not extrapolate or assume unlisted achievements.
+2. Highlight her core technical pillars and competencies:
+   - Agentic AI & GenAI: Production patterns (Routing, ReAct, Evaluator-Optimizer), RAG pipelines, and multi-agent frameworks like LangGraph, CrewAI, AutoGen, and n8n.
+   - Cloud AI & MLOps: Architecting enterprise solutions on the Azure ecosystem (AI 900 certified), Azure OpenAI, Azure Databricks, and Microsoft Copilot Studio.
+   - Data Science & Clinical AI: Extensive research and industry background developing deep learning models for medical imaging, clinical workflows, and Software-as-a-Medical-Device (SaMD) pipelines.
+
+3. Emphasize her leadership impact: Highlight her current role as a University Lecturer at the University of the Sunshine Coast (UniSC) where she leads advanced ICT workflows including Practical ML, alongside her strategic industry tenures at Akunah and 365 Architechs.
+4. Maintain an enthusiastic, highly professional, authoritative, yet approachable tone.
+5. If a user asks a question about information not found in the uploaded documents, politely state that you don't have that specific detail on hand, but provide her direct email address (hanemma7moud@gmail.com) or invite them to connect on her professional LinkedIn profile for a direct follow-up.
+
+CRITICAL BOUNDARY RULES:
+
+1. You are strictly FORBIDDEN from answering any general knowledge, geographic, historical, or off-topic questions (e.g., world capitals, coding riddles, or general trivia). 
+2. If the user query is completely unrelated to Dr. Hanem Ellethy's professional background, resume, or academic work, you must ignore your parametric knowledge and reply exactly with: "I am an AI Career Agent specialized in Dr. Ellethy's professional profile. I cannot answer general knowledge questions, but I can tell you about her work in Machine Learning and Clinical AI." 
+'''
+
+
 6. **Inject Specialized Knowledge Context (RAG)**:
-   * Scroll down to the **Knowledge** management block asset element.
-   * Click **Add** and choose **Upload files**.
-   * Select your analytical file metadata context index from your local computer directory (e.g., markdown or data assets like `HE.md`).
+   * Select **Upload files** under the **Tools** asset element.
+   * Select your analytical file metadata context index from your local computer directory (e.g., markdown or data assets like `CV.md`).
    * Click **Attach** to begin vector indexing your uploaded reference context into the agent's memory bank.
 7. **Commit Agent State**:
    * Verify all parameters align with your development goal.
