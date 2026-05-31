@@ -1,3 +1,4 @@
+
 # 🤖 AI Career Agent (AI-900 Project Showcase)
 
 Welcome to the **AI Career Agent** template repository! This project is a hands-on implementation designed for students and developers to move beyond theory and build a live, industry-grade portfolio piece. 
@@ -46,17 +47,19 @@ Now, configure your cloud brain. You will build the agent inside your portal and
 2. Click **New app**, then select your forked repository: `[Your-Username]/ai-career-agent`.
 3. Set your main file path to `app.py`.
 4. **⚠️ CRITICAL (Security Step):** Before hitting deploy, click **Advanced Settings** and inject your Azure credentials securely into the Secrets panel:
+5. 
    ```toml
    AZURE_ENDPOINT = "[https://your-resource-name.azure.com/](https://your-resource-name.azure.com/)"
    AZURE_API_KEY = "your 40 character secret key"
    AZURE_AGENT_NAME = "your agent deployment name"
    AZURE_AGENT_VERSION="your agent version numbe, e.g 5"
-   '''
-5. Click Deploy! Your application will be live globally in under two minutes.
-6. 
+   
+   
+6. Click Deploy! Your application will be live globally in under two minutes.
+ 
 ---
    
-## Congratulations your agent is life now and you can use it in your github profile like mine :)
+### Congratulations your agent is life now and you can use it in your github profile like mine :)
 
 <img width="652" height="148" alt="Screenshot 2026-05-31 140758" src="https://github.com/user-attachments/assets/994a52f8-a925-4e56-9b21-485e0e37fabe" />
 
