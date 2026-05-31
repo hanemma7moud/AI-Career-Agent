@@ -22,8 +22,8 @@ Because allowed deployment regions are not globally uniform and depend heavily o
    * Navigate to the **Azure Portal Home**.
    * Under the *Azure services* grid or the *Navigate* section, click on **Subscriptions**.
      
-  ![Uploading Screenshot 2026-05-31 152122.png…]()
 <img width="1410" height="873" alt="Screenshot 2026-05-31 152110" src="https://github.com/user-attachments/assets/1c69922d-7c9b-4568-97c5-14c6ef1a1c27" />
+
 
 
 
@@ -35,6 +35,7 @@ Because allowed deployment regions are not globally uniform and depend heavily o
 
 
   
+
 3. **Navigate to Compliance Policies**:
    * In the subscription's left-hand sidebar navigation menu, scroll down to the **Settings** sub-section.
    * Click on **Policies** to open the policy monitoring dashboard.
@@ -43,6 +44,7 @@ Because allowed deployment regions are not globally uniform and depend heavily o
 
 
      
+
 4. **Locate Regional Restrictions**:
    * Under the *Policy | Compliance* view, review the list of assigned compliance rules at the bottom.
    * Click on the assignment link titled **Allowed resource deployment regions**.
@@ -51,11 +53,13 @@ Because allowed deployment regions are not globally uniform and depend heavily o
 
 
 
+
 <img width="1911" height="909" alt="Screenshot 2026-05-31 154109" src="https://github.com/user-attachments/assets/ca6c89f7-f16e-4ff1-a2d2-827c7342bded" />
 
 
 
     
+
 5. **Inspect Parameter Values**:
    * Select the policy name to open its deep configuration properties.
    * Ensure you are viewing the **Parameters** tab.
