@@ -5,7 +5,7 @@ Welcome to the **AI Career Agent** template repository! This project is a hands-
 
 This framework leverages **Microsoft Foundry (2026 Standards)**, **Retrieval-Augmented Generation (RAG)**, and **Streamlit** to create an interactive, autonomous chat assistant grounded entirely in your professional CV.
 
-🚀 **Live Demo Reference:** <a href="https://hanem-ai-agent.streamlit.app/" target="_blank" rel="noopener noreferrer">Check out my live profile agent here!</a>
+🚀 **Live Demo Reference:** [Check out my live profile agent here!](https://hanem-ai-agent.streamlit.app/))
 
 ---
 
