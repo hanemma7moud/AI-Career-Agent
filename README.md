@@ -53,6 +53,8 @@ Now, configure your cloud brain. You will build the agent inside your portal and
    AZURE_AGENT_VERSION="your agent version numbe, e.g 5"
    '''
 5. Click Deploy! Your application will be live globally in under two minutes.
+## Congratulations your agent is life now and you can use it in your github profile like mine :)
+<img width="700" height="271" alt="image" src="https://github.com/user-attachments/assets/ff810774-832d-4672-8ac0-297ad33186a4" />
 
    
 ## How to Customize Your AI Agent
